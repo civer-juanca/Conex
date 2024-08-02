@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\producto;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
@@ -37,7 +37,7 @@ class ProductoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(producto $producto)
+    public function show(Producto $producto)
     {
         //
     }
@@ -45,7 +45,7 @@ class ProductoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(producto $producto)
+    public function edit(Producto $producto)
     {
         return view('productos.edit', compact('producto'));
     }
@@ -62,7 +62,7 @@ class ProductoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(producto $producto)
+    public function destroy(Producto $producto)
     {
         $producto->delete();
         return redirect()->route('productos.index');
